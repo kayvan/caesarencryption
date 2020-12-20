@@ -4,7 +4,7 @@ public class juliuscaesar {
     public static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         System.out.println("Please enter your word: ");
-        String in1 = sc.next() , in = in1.toLowerCase(), enc = "" ;
+        String in = sc.next().toLowerCase() , enc = "" ;
         for(int i = 0 ; i < in.length() ; i++) {
             if( (in.charAt(i)) == 'z'){
                 enc+=(char) ('a');
