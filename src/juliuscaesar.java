@@ -13,7 +13,7 @@ public class juliuscaesar {
                 enc += (char) (in.charAt(i)+1);
 
         }
-        enc = enc.toUpperCase();
+        enc = enc.toUpperCase(); // result in upper case
         System.out.println(enc);
     }
 }
