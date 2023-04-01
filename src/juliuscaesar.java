@@ -4,16 +4,17 @@ public class juliuscaesar {
     public static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         System.out.println("Please enter your word: ");
-        String in = sc.next().toLowerCase() , enc = "" ;
-        for(int i = 0 ; i < in.length() ; i++) {
-            if( (in.charAt(i)) == 'z'){
-                enc+=(char) ('a');
+        String in = sc.nextLine().toLowerCase(), enc = "";
+        for (int i = 0; i < in.length(); i++) {
+            char c = in.charAt(i);
+            if (c == ' ') {
+                enc += ' '; // Handle spaces separately
+            } else {
+                char shifted = (char) ((c - 'a' + 1) % 26 + 'a'); // Shift the character by 1
+                enc += shifted;
             }
-            else
-                enc += (char) (in.charAt(i)+1);
-
         }
-        enc = enc.toUpperCase(); // result in upper case
+        enc = enc.toUpperCase(); // Convert the output to uppercase
         System.out.println(enc);
     }
 }
